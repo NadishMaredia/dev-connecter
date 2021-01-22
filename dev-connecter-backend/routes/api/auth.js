@@ -49,7 +49,6 @@ router.post('/',[
                 errors: [ {msg: 'Invalid Credentials'} ]
             });
         }
-        
         const payload = {
             user: {
                 id: user.id
