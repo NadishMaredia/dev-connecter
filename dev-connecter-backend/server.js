@@ -6,6 +6,9 @@ const app = express();
 //Connect to DB
 connectDB();
 
+//Middleware
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.send('Hello');
 });
