@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const Cors = require('cors')
 
 const app = express();
 
@@ -8,6 +9,7 @@ connectDB();
 
 //Middleware
 app.use(express.json());
+app.use(Cors());
 
 app.get('/', (req, res) => {
     res.send('Hello');
